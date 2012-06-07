@@ -44,4 +44,14 @@ PRODUCT_LOCALES += hdpi
 -include device/semc/msm7x30-common/prebuilt/resources-hdpi.mk
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=240
+    ro.sf.lcd_density=240 \
+    ro.telephony.default_network=4 \
+    ro.ril.vzw.feature=1 \
+    ro.ril.wp.feature=1 \
+    persist.telephony.support_ipv4=true \
+    persist.telephony.support_ipv6=true \
+    ro.cdma.data_retry_config=max_retries=infinite,0,0,60000,120000,480000,900000 \
+    ro.cdma.home.operator.alpha=Verizon \
+    ro.cdma.home.operator.numeric=310004 \
+    ro.cdma.homesystem=64,65,76,77,78,79,80,81,82,83 \
+    ro.telephony.ril.v3=datacall
