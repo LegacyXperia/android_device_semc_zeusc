@@ -48,6 +48,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.telephony.support_ipv6=true \
     ro.cdma.data_retry_config=max_retries=infinite,0,0,60000,120000,480000,900000 \
     ro.cdma.home.operator.alpha=Verizon \
-    ro.cdma.home.operator.numeric=310004 \
+    ro.cdma.home.operator.numeric=310012 \
     ro.cdma.homesystem=64,65,76,77,78,79,80,81,82,83 \
     ro.telephony.ril.v3=datacall
