@@ -39,6 +39,7 @@ $(call inherit-product, device/semc/msm7x30-common/prebuilt/resources-hdpi.mk)
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=240 \
+    ro.telephony.ril_class=SemcRILCDMA \
     ro.telephony.default_network=4 \
     ro.ril.vzw.feature=1 \
     ro.ril.wp.feature=1 \
