@@ -7,6 +7,10 @@ $(call inherit-product, device/semc/zeus-common/zeus.mk)
 
 $(call inherit-product, device/common/gps/gps_eu_supl.mk)
 
+# These are the hardware-specific features
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml
+
 PRODUCT_AAPT_CONFIG := normal hdpi hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
@@ -15,7 +19,6 @@ PRODUCT_COPY_FILES += \
     device/semc/zeusc/prebuilt/init.semc.usb.rc:root/init.semc.usb.rc \
     device/semc/zeusc/prebuilt/hw_config.sh:system/etc/hw_config.sh \
     device/semc/msm7x30-common/prebuilt/logo_H.rle:root/logo.rle
-
 
 # Device specific part for two-stage boot
 PRODUCT_COPY_FILES += \
@@ -36,6 +39,7 @@ PRODUCT_COPY_FILES += \
 
 $(call inherit-product, device/semc/msm7x30-common/prebuilt/resources-hdpi.mk)
 
+# Device properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=240 \
     ro.telephony.ril_class=SemcRILCDMA \
