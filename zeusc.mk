@@ -18,7 +18,7 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 PRODUCT_COPY_FILES += \
     device/semc/zeusc/prebuilt/init.semc.usb.rc:root/init.semc.usb.rc \
     device/semc/zeusc/prebuilt/hw_config.sh:system/etc/hw_config.sh \
-    device/semc/msm7x30-common/prebuilt/logo_H.rle:root/initlogo.rle
+    device/semc/msm7x30-common/bootlogo/$(TARGET_SCREEN_WIDTH)x$(TARGET_SCREEN_HEIGHT).rle:root/logo.rle
 
 # Device specific part for two-stage boot
 PRODUCT_COPY_FILES += \
@@ -37,12 +37,10 @@ PRODUCT_COPY_FILES += \
     device/semc/zeusc/config/keypad-zeus.kcm:system/usr/keychars/keypad-zeus.kcm \
     device/semc/zeusc/config/sensors.conf:system/etc/sensors.conf
 
-$(call inherit-product, device/semc/msm7x30-common/prebuilt/resources-hdpi.mk)
-
 # Device properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=240 \
-    ro.telephony.ril_class=SemcRILCDMA \
+    ro.telephony.ril_class=SemcQualcomm7x30RILCDMA \
     ro.telephony.default_network=4 \
     ro.ril.vzw.feature=1 \
     ro.ril.wp.feature=1 \
