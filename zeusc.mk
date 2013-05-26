@@ -5,8 +5,6 @@ DEVICE_PACKAGE_OVERLAYS += device/semc/zeusc/overlay
 
 $(call inherit-product, device/semc/zeus-common/zeus.mk)
 
-$(call inherit-product, device/common/gps/gps_eu_supl.mk)
-
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml
