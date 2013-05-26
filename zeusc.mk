@@ -37,8 +37,6 @@ PRODUCT_COPY_FILES += \
     device/semc/zeusc/config/keypad-zeus.kcm:system/usr/keychars/keypad-zeus.kcm \
     device/semc/zeusc/config/sensors.conf:system/etc/sensors.conf
 
-$(call inherit-product, device/semc/msm7x30-common/prebuilt/resources-hdpi.mk)
-
 # Device properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=240 \
